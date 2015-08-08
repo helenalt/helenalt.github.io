@@ -143,9 +143,11 @@
     <script charset="utf-8">
     var button = document.getElementById('category');
 
-    $('#catValue').on('click',function(){
+      $('#catValue').on('click',function(){
+       console.log(this.innerHTML);
+      //$('.catValue').on('click',function(){
+      $("#catText").replaceWith("<span id='catText'>"+this.innerHTML +"</span>");
       console.log(this.innerHTML);
-      $("#catText").replaceWith(this.innerHTML);
 
     });
     $("#submit").on("click",function(){
