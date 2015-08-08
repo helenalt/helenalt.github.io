@@ -99,9 +99,9 @@
                             <span id="catText">Category</span><span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu">
-                            <li><a href="#" id="catValue">Learn</a></li>
-                            <li><a href="#" id="catValue">Life</a></li>
-                            <li><a href="#" id="catValue">Biz</a></li>
+                            <li><a href="#" class="catValue">Learn</a></li>
+                            <li><a href="#" class="catValue">Life</a></li>
+                            <li><a href="#" class="catValue">Biz</a></li>
                           </ul>
                         </div>
 
@@ -143,17 +143,11 @@
     <script charset="utf-8">
     var button = document.getElementById('category');
 
-      $('#catValue').on('click',function(){
-       console.log(this.innerHTML);
-      //$('.catValue').on('click',function(){
-      $("#catText").replaceWith("<span id='catText'>"+this.innerHTML +"</span>");
+    $('.catValue').on('click',function(){
       console.log(this.innerHTML);
+      $("#catText").replaceWith("<span id='catText'>"+this.innerHTML+"</span>");
 
     });
-    $("#submit").on("click",function(){
-      if($('.formText').val == ""){alert("");}
-    }
-    );
     $(".formText").change(function(){
       $("#submit").removeAttr("disabled");
     });
